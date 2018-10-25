@@ -76,18 +76,18 @@ fun findUserByName(name: String): User? {
 ただし、下記の場合を除きます。
 
 * `return`, `break`, `continue`, `throw`のみを本体に含む場合
-* else-if
+* else-if
 
 ```kotlin
-// NG
+// OK
+if ( ... ) {
+} else if ( ... ) {
+}
+
+// also OK
 if ( ... ) {
 } else {
     if ( ... ) {
     }
-}
-
-// OK
-if ( ... ) {
-} else if ( ... ) {
 }
 ```
