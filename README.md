@@ -75,5 +75,19 @@ fun findUserByName(name: String): User? {
 制御構文においてブレース（`{}`）は省略しないでください。
 ただし、下記の場合を除きます。
 
-* else-if
 * `return`, `break`, `continue`, `throw`のみを本体に含む場合
+* else-if
+
+```kotlin
+// OK
+if ( ... ) {
+} else if ( ... ) {
+}
+
+// also OK
+if ( ... ) {
+} else {
+    if ( ... ) {
+    }
+}
+```
